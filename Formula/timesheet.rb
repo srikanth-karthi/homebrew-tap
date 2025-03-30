@@ -17,9 +17,6 @@ class Timesheet < Formula
         bash_output = Utils.safe_popen_read("#{bin}/timesheet", "completion", "bash")
         (bash_completion/"timesheet").write bash_output
     
-        # Fish completion (optional, if supported)
-        fish_output = Utils.safe_popen_read("#{bin}/timesheet", "completion", "fish")
-        (fish_completion/"timesheet.fish").write fish_output
       end
     
       test do

@@ -13,16 +13,16 @@ class Timesheet < Formula
       url "https://github.com/srikanth-karthi/Timesheet-cli-application/releases/download/v2.3.0/timesheet_2.3.0_darwin_amd64.tar.gz"
       sha256 "39bdd65a0328724bba6eeeb9be7fa4ac830f9dc2ec582cec6626b5f61ac9d418"
 
+
       def install
-        bin.install "timesheet"
+        bin.install "timesheet-mac-x64" => "timesheet"
       end
     end
     if Hardware::CPU.arm?
       url "https://github.com/srikanth-karthi/Timesheet-cli-application/releases/download/v2.3.0/timesheet_2.3.0_darwin_arm64.tar.gz"
       sha256 "8352e71df539b5e13844c1fca87b4ce9f975afc728089e50725238a77d2d8d2a"
-
       def install
-        bin.install "timesheet"
+        bin.install "timesheet-mac-arm" => "timesheet"
       end
     end
   end
@@ -33,8 +33,9 @@ class Timesheet < Formula
         url "https://github.com/srikanth-karthi/Timesheet-cli-application/releases/download/v2.3.0/timesheet_2.3.0_linux_amd64.tar.gz"
         sha256 "f715c52f3f5187de2116a0217de35af8622a356c86b122011a13b8bffb1e956d"
 
+
         def install
-          bin.install "timesheet"
+          bin.install "timesheet-linux" => "timesheet"
         end
       end
     end
